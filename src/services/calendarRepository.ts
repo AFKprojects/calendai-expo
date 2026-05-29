@@ -222,7 +222,7 @@ export const getAuthenticatedSession = async (): Promise<{ userId: string; token
       });
 
       if (error || !data.user || !data.session) {
-        console.error('Error signing up in Supabase:', error);
+        console.warn('Error signing up in Supabase:', error);
         return null;
       }
 
@@ -240,7 +240,7 @@ export const getAuthenticatedSession = async (): Promise<{ userId: string; token
       });
 
       if (error) {
-        console.error('Error logging in to Supabase:', error);
+        console.warn('Error logging in to Supabase:', error);
         // Clear if credentials unauthorized to trigger signup next time
         if (error.status === 400 || error.status === 401) {
           await AsyncStorage.removeItem('supabase_email');
@@ -257,7 +257,7 @@ export const getAuthenticatedSession = async (): Promise<{ userId: string; token
       return null;
     }
   } catch (error) {
-    console.error('Auth error:', error);
+    console.warn('Auth error:', error);
     return null;
   }
 };
@@ -381,7 +381,7 @@ export const fetchHourlyWidgets = async (dateStr: string): Promise<Record<number
       }
     }
   } catch (error) {
-    console.error('Supabase fetch hourly content error:', error);
+    console.warn('Supabase fetch hourly content error:', error);
   }
 
   // 2. Try cache
@@ -499,7 +499,7 @@ export const subscribeToChatMessages = (
         onUpdate(domainMsgs);
       }
     } catch (e) {
-      console.error('Error fetching chat messages:', e);
+      console.warn('Error fetching chat messages:', e);
     }
   };
 
@@ -547,13 +547,13 @@ export const sendChatMessage = async (dateStr: string, userName: string, text: s
     });
 
     if (error) {
-      console.error('Error sending chat message:', error);
+      console.warn('Error sending chat message:', error);
       return false;
     }
 
     return true;
   } catch (error) {
-    console.error('Send chat error:', error);
+    console.warn('Send chat error:', error);
     return false;
   }
 };
