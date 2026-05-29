@@ -7,10 +7,10 @@ import {
   TextInput,
   TouchableOpacity,
   Switch,
-  SafeAreaView,
   StatusBar,
   Alert,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { ArrowLeft, User, Star, Bell, Info, RefreshCw, Clock } from 'lucide-react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';

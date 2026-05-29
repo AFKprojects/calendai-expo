@@ -6,9 +6,9 @@ import {
   ScrollView,
   ActivityIndicator,
   TouchableOpacity,
-  SafeAreaView,
   StatusBar,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { Settings, ListCollapse, RefreshCw } from 'lucide-react-native';
