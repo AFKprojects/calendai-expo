@@ -1,0 +1,1832 @@
+{
+  "01-01": [
+    "Mieczysław",
+    "Mieszko",
+    "Eufrozyna"
+  ],
+  "01-02": [
+    "Izydor",
+    "Grzegorz",
+    "Makary"
+  ],
+  "01-03": [
+    "Danuta",
+    "Genowefa",
+    "Zdzisław"
+  ],
+  "01-04": [
+    "Aniela",
+    "Tytus",
+    "Eugeniusz"
+  ],
+  "01-05": [
+    "Edward",
+    "Szymon",
+    "Hanna"
+  ],
+  "01-06": [
+    "Kacper",
+    "Melchior",
+    "Baltazar"
+  ],
+  "01-07": [
+    "Julian",
+    "Lucjan",
+    "Walenty"
+  ],
+  "01-08": [
+    "Seweryn",
+    "Juliusz",
+    "Teofil"
+  ],
+  "01-09": [
+    "Marcelina",
+    "Julianna",
+    "Antoni"
+  ],
+  "01-10": [
+    "Danuta",
+    "Wilhelm",
+    "Jan"
+  ],
+  "01-11": [
+    "Matylda",
+    "Honorata",
+    "Feliks"
+  ],
+  "01-12": [
+    "Arkadiusz",
+    "Benedykt",
+    "Czesław"
+  ],
+  "01-13": [
+    "Weronika",
+    "Bogumiła",
+    "Mikołaj"
+  ],
+  "01-14": [
+    "Feliks",
+    "Nina",
+    "Maciej"
+  ],
+  "01-15": [
+    "Paweł",
+    "Idzi",
+    "Aleksander"
+  ],
+  "01-16": [
+    "Marcela",
+    "Włodzimierz",
+    "Otto"
+  ],
+  "01-17": [
+    "Antoni",
+    "Jan",
+    "Rościsław"
+  ],
+  "01-18": [
+    "Małgorzata",
+    "Piotr",
+    "Regina"
+  ],
+  "01-19": [
+    "Henryk",
+    "Mariusz",
+    "Marta"
+  ],
+  "01-20": [
+    "Fabian",
+    "Sebastian",
+    "Jan"
+  ],
+  "01-21": [
+    "Agnieszka",
+    "Jarosław",
+    "Marceli"
+  ],
+  "01-22": [
+    "Anastazja",
+    "Wincenty",
+    "Marek"
+  ],
+  "01-23": [
+    "Maria",
+    "Jan",
+    "Klemens"
+  ],
+  "01-24": [
+    "Rafał",
+    "Felicjan",
+    "Tymoteusz"
+  ],
+  "01-25": [
+    "Paweł",
+    "Miłosz",
+    "Elżbieta"
+  ],
+  "01-26": [
+    "Tymoteusz",
+    "Michał",
+    "Tytus"
+  ],
+  "01-27": [
+    "Jolanta",
+    "Karol",
+    "Jan"
+  ],
+  "01-28": [
+    "Tomasz",
+    "Walery",
+    "Karol"
+  ],
+  "01-29": [
+    "Zdzisław",
+    "Franciszek",
+    "Józef"
+  ],
+  "01-30": [
+    "Maciej",
+    "Martyna",
+    "Teofil"
+  ],
+  "01-31": [
+    "Jan",
+    "Ludwika",
+    "Marceli"
+  ],
+  "02-01": [
+    "Brygida",
+    "Ignacy",
+    "Seweryn"
+  ],
+  "02-02": [
+    "Maria",
+    "Mirosław",
+    "Kornel"
+  ],
+  "02-03": [
+    "Błażej",
+    "Oskar",
+    "Stefan"
+  ],
+  "02-04": [
+    "Weronika",
+    "Mariusz",
+    "Joanna"
+  ],
+  "02-05": [
+    "Agata",
+    "Adelajda",
+    "Jakub"
+  ],
+  "02-06": [
+    "Dorota",
+    "Bogdan",
+    "Paweł"
+  ],
+  "02-07": [
+    "Romuald",
+    "Ryszard",
+    "Teodor"
+  ],
+  "02-08": [
+    "Jan",
+    "Piotr",
+    "Emilia"
+  ],
+  "02-09": [
+    "Apolonia",
+    "Donald",
+    "Cyryl"
+  ],
+  "02-10": [
+    "Jacek",
+    "Scholastyka",
+    "Elwira"
+  ],
+  "02-11": [
+    "Maria",
+    "Olgierd",
+    "Grzegorz"
+  ],
+  "02-12": [
+    "Eulalia",
+    "Radosław",
+    "Modest"
+  ],
+  "02-13": [
+    "Grzegorz",
+    "Katarzyna",
+    "Krystyn"
+  ],
+  "02-14": [
+    "Walenty",
+    "Metody",
+    "Cyryl"
+  ],
+  "02-15": [
+    "Faustyn",
+    "Jowita",
+    "Zygfryd"
+  ],
+  "02-16": [
+    "Danuta",
+    "Julian",
+    "Daniel"
+  ],
+  "02-17": [
+    "Donat",
+    "Łukasz",
+    "Zbigniew"
+  ],
+  "02-18": [
+    "Szymon",
+    "Konstancja",
+    "Maksymilian"
+  ],
+  "02-19": [
+    "Konrad",
+    "Arnold",
+    "Józef"
+  ],
+  "02-20": [
+    "Leon",
+    "Ludomił",
+    "Zenobiusz"
+  ],
+  "02-21": [
+    "Eleonora",
+    "Feliks",
+    "Robert"
+  ],
+  "02-22": [
+    "Marta",
+    "Małgorzata",
+    "Piotr"
+  ],
+  "02-23": [
+    "Romana",
+    "Damian",
+    "Polikarp"
+  ],
+  "02-24": [
+    "Maciej",
+    "Marek",
+    "Bogusz"
+  ],
+  "02-25": [
+    "Wiktor",
+    "Cezary",
+    "Małgorzata"
+  ],
+  "02-26": [
+    "Mirosław",
+    "Aleksander",
+    "Klaudia"
+  ],
+  "02-27": [
+    "Gabriel",
+    "Anastazja",
+    "Julian"
+  ],
+  "02-28": [
+    "Roman",
+    "Józef",
+    "Lech"
+  ],
+  "02-29": [
+    "Oswald",
+    "Rufin",
+    "August"
+  ],
+  "03-01": [
+    "Albin",
+    "Antoni",
+    "Radosław"
+  ],
+  "03-02": [
+    "Helena",
+    "Karol",
+    "Paweł"
+  ],
+  "03-03": [
+    "Kunegunda",
+    "Tycjan",
+    "Maryn"
+  ],
+  "03-04": [
+    "Kazimierz",
+    "Łucja",
+    "Eugeniusz"
+  ],
+  "03-05": [
+    "Wacław",
+    "Fryderyk",
+    "Adrian"
+  ],
+  "03-06": [
+    "Róża",
+    "Wiktor",
+    "Klaudiusz"
+  ],
+  "03-07": [
+    "Tomasz",
+    "Felicjan",
+    "Paweł"
+  ],
+  "03-08": [
+    "Beata",
+    "Wincenty",
+    "Jan"
+  ],
+  "03-09": [
+    "Franciszka",
+    "Bruno",
+    "Katarzyna"
+  ],
+  "03-10": [
+    "Cyprian",
+    "Aleksander",
+    "Marceli"
+  ],
+  "03-11": [
+    "Konstanty",
+    "Rozalia",
+    "Benedykt"
+  ],
+  "03-12": [
+    "Bernard",
+    "Grzegorz",
+    "Józefina"
+  ],
+  "03-13": [
+    "Krystyna",
+    "Bożena",
+    "Patryk"
+  ],
+  "03-14": [
+    "Matylda",
+    "Leon",
+    "Jakub"
+  ],
+  "03-15": [
+    "Longin",
+    "Klemens",
+    "Ludwik"
+  ],
+  "03-16": [
+    "Izabela",
+    "Oktawia",
+    "Hilary"
+  ],
+  "03-17": [
+    "Patryk",
+    "Zbigniew",
+    "Regina"
+  ],
+  "03-18": [
+    "Edward",
+    "Krystian",
+    "Anzelm"
+  ],
+  "03-19": [
+    "Józef",
+    "Bogdan",
+    "Leon"
+  ],
+  "03-20": [
+    "Eufemia",
+    "Klaudia",
+    "Maurycy"
+  ],
+  "03-21": [
+    "Mikołaj",
+    "Lubomira",
+    "Benedykt"
+  ],
+  "03-22": [
+    "Katarzyna",
+    "Bogusław",
+    "Bazyli"
+  ],
+  "03-23": [
+    "Pelagia",
+    "Feliks",
+    "Piotr"
+  ],
+  "03-24": [
+    "Gabriel",
+    "Marek",
+    "Katarzyna"
+  ],
+  "03-25": [
+    "Maria",
+    "Mariola",
+    "Wieńczysław"
+  ],
+  "03-26": [
+    "Emanuel",
+    "Teodor",
+    "Larysa"
+  ],
+  "03-27": [
+    "Jan",
+    "Rupert",
+    "Lidia"
+  ],
+  "03-28": [
+    "Aniela",
+    "Jan",
+    "Kastor"
+  ],
+  "03-29": [
+    "Wiktoryn",
+    "Eustachy",
+    "Cyryl"
+  ],
+  "03-30": [
+    "Aniela",
+    "Leonard",
+    "Jan"
+  ],
+  "03-31": [
+    "Balbina",
+    "Kornelia",
+    "Benjamin"
+  ],
+  "04-01": [
+    "Grażyna",
+    "Irena",
+    "Hugo"
+  ],
+  "04-02": [
+    "Władysław",
+    "Franciszek",
+    "Teodozja"
+  ],
+  "04-03": [
+    "Ryszard",
+    "Pankracy",
+    "Sybiłła"
+  ],
+  "04-04": [
+    "Wacław",
+    "Izydor",
+    "Izabela"
+  ],
+  "04-05": [
+    "Katarzyna",
+    "Wincenty",
+    "Irena"
+  ],
+  "04-06": [
+    "Celestyn",
+    "Wilhelm",
+    "Ireneusz"
+  ],
+  "04-07": [
+    "Donat",
+    "Rufin",
+    "Jan"
+  ],
+  "04-08": [
+    "Dionizy",
+    "Julia",
+    "Janusz"
+  ],
+  "04-09": [
+    "Maja",
+    "Dymitr",
+    "Walerian"
+  ],
+  "04-10": [
+    "Michał",
+    "Makary",
+    "Daniel"
+  ],
+  "04-11": [
+    "Filip",
+    "Leon",
+    "Jarosław"
+  ],
+  "04-12": [
+    "Juliusz",
+    "Ludwik",
+    "Wiktor"
+  ],
+  "04-13": [
+    "Przemysław",
+    "Ida",
+    "Justyn"
+  ],
+  "04-14": [
+    "Berenika",
+    "Walerian",
+    "Julianna"
+  ],
+  "04-15": [
+    "Anastazja",
+    "Wacław",
+    "Leon"
+  ],
+  "04-16": [
+    "Julia",
+    "Benedykt",
+    "Ksenia"
+  ],
+  "04-17": [
+    "Robert",
+    "Rudolf",
+    "Jakub"
+  ],
+  "04-18": [
+    "Alicja",
+    "Bogusław",
+    "Apoloniusz"
+  ],
+  "04-19": [
+    "Adolf",
+    "Tymon",
+    "Włodzimierz"
+  ],
+  "04-20": [
+    "Agnieszka",
+    "Czesław",
+    "Teotym"
+  ],
+  "04-21": [
+    "Bartosz",
+    "Feliks",
+    "Anzelm"
+  ],
+  "04-22": [
+    "Łukasz",
+    "Kaja",
+    "Leonid"
+  ],
+  "04-23": [
+    "Wojciech",
+    "Jerzy",
+    "Adalbert"
+  ],
+  "04-24": [
+    "Aleksander",
+    "Grzegorz",
+    "Fidelis"
+  ],
+  "04-25": [
+    "Marek",
+    "Jarosław",
+    "Erwina"
+  ],
+  "04-26": [
+    "Marzena",
+    "Klaudiusz",
+    "Maria"
+  ],
+  "04-27": [
+    "Felicjan",
+    "Teofil",
+    "Zyta"
+  ],
+  "04-28": [
+    "Paweł",
+    "Walerian",
+    "Ludwik"
+  ],
+  "04-29": [
+    "Piotr",
+    "Robert",
+    "Rita"
+  ],
+  "04-30": [
+    "Marian",
+    "Katarzyna",
+    "Józef"
+  ],
+  "05-01": [
+    "Józef",
+    "Jeremi",
+    "Filip"
+  ],
+  "05-02": [
+    "Zygmunt",
+    "Atanazy",
+    "Borys"
+  ],
+  "05-03": [
+    "Maria",
+    "Jolanta",
+    "Aleksander"
+  ],
+  "05-04": [
+    "Monika",
+    "Florian",
+    "Władysław"
+  ],
+  "05-05": [
+    "Waldemar",
+    "Irena",
+    "Pius"
+  ],
+  "05-06": [
+    "Filip",
+    "Jakub",
+    "Jan"
+  ],
+  "05-07": [
+    "Gizela",
+    "Ludmiła",
+    "Benedykt"
+  ],
+  "05-08": [
+    "Stanisław",
+    "Wiktor",
+    "Marek"
+  ],
+  "05-09": [
+    "Karolina",
+    "Grzegorz",
+    "Beatrycze"
+  ],
+  "05-10": [
+    "Antoni",
+    "Izydor",
+    "Jan"
+  ],
+  "05-11": [
+    "Ignacy",
+    "Mamert",
+    "Władysław"
+  ],
+  "05-12": [
+    "Pankracy",
+    "Dominik",
+    "Achilles"
+  ],
+  "05-13": [
+    "Serwacy",
+    "Gloria",
+    "Andrzej"
+  ],
+  "05-14": [
+    "Bonifacy",
+    "Maciej",
+    "Julian"
+  ],
+  "05-15": [
+    "Zofia",
+    "Nadzieja",
+    "Izydor"
+  ],
+  "05-16": [
+    "Andrzej",
+    "Szymon",
+    "Adam"
+  ],
+  "05-17": [
+    "Weronika",
+    "Sławomir",
+    "Paschalis"
+  ],
+  "05-18": [
+    "Stanisław",
+    "Eryk",
+    "Feliksa"
+  ],
+  "05-19": [
+    "Piotr",
+    "Celestyn",
+    "Mikołaj"
+  ],
+  "05-20": [
+    "Bazyli",
+    "Bernardyn",
+    "Krystyna"
+  ],
+  "05-21": [
+    "Jan",
+    "Wiktor",
+    "Kryspin"
+  ],
+  "05-22": [
+    "Helena",
+    "Wiesław",
+    "Emilia"
+  ],
+  "05-23": [
+    "Emilia",
+    "Iwona",
+    "Dezyderiusz"
+  ],
+  "05-24": [
+    "Joanna",
+    "Zuzanna",
+    "Helena"
+  ],
+  "05-25": [
+    "Borys",
+    "Grzegorz",
+    "Urban"
+  ],
+  "05-26": [
+    "Filip",
+    "Paulina",
+    "Ewelina"
+  ],
+  "05-27": [
+    "Juliusz",
+    "Jana",
+    "Augustyn"
+  ],
+  "05-28": [
+    "Emil",
+    "Augustyn",
+    "Jaromir"
+  ],
+  "05-29": [
+    "Magdalena",
+    "Maksymilian",
+    "Teodozja"
+  ],
+  "05-30": [
+    "Karol",
+    "Jan",
+    "Ferdynand"
+  ],
+  "05-31": [
+    "Aniela",
+    "Bożena",
+    "Kamil"
+  ],
+  "06-01": [
+    "Jakub",
+    "Konrad",
+    "Nikodem"
+  ],
+  "06-02": [
+    "Erazm",
+    "Marianna",
+    "Marek"
+  ],
+  "06-03": [
+    "Leszek",
+    "Tamara",
+    "Laurenty"
+  ],
+  "06-04": [
+    "Franciszek",
+    "Karol",
+    "Dianis"
+  ],
+  "06-05": [
+    "Walter",
+    "Bonifacy",
+    "Walerian"
+  ],
+  "06-06": [
+    "Norbert",
+    "Paulina",
+    "Dominika"
+  ],
+  "06-07": [
+    "Robert",
+    "Wiesław",
+    "Łukasz"
+  ],
+  "06-08": [
+    "Maksym",
+    "Medard",
+    "Wojciech"
+  ],
+  "06-09": [
+    "Felicjan",
+    "Pelagia",
+    "Maksymilian"
+  ],
+  "06-10": [
+    "Bogumił",
+    "Małgorzata",
+    "Diana"
+  ],
+  "06-11": [
+    "Barnaba",
+    "Radomił",
+    "Feliks"
+  ],
+  "06-12": [
+    "Jan",
+    "Onufry",
+    "Leon"
+  ],
+  "06-13": [
+    "Antoni",
+    "Lucjan",
+    "Tobiasz"
+  ],
+  "06-14": [
+    "Elizeusz",
+    "Walerian",
+    "Michał"
+  ],
+  "06-15": [
+    "Jolanta",
+    "Wit",
+    "Modest"
+  ],
+  "06-16": [
+    "Alina",
+    "Benon",
+    "Aneta"
+  ],
+  "06-17": [
+    "Albert",
+    "Ignacy",
+    "Laura"
+  ],
+  "06-18": [
+    "Elżbieta",
+    "Marek",
+    "Marceli"
+  ],
+  "06-19": [
+    "Gerwazy",
+    "Protazy",
+    "Julian"
+  ],
+  "06-20": [
+    "Bogna",
+    "Rafał",
+    "Florentyna"
+  ],
+  "06-21": [
+    "Alicja",
+    "Alojzy",
+    "Rudolf"
+  ],
+  "06-22": [
+    "Paulina",
+    "Tomasz",
+    "Jan"
+  ],
+  "06-23": [
+    "Wanda",
+    "Zenon",
+    "Józef"
+  ],
+  "06-24": [
+    "Jan",
+    "Danuta",
+    "Janusz"
+  ],
+  "06-25": [
+    "Łucja",
+    "Wilhelm",
+    "Guy"
+  ],
+  "06-26": [
+    "Jan",
+    "Paweł",
+    "Zygmunt"
+  ],
+  "06-27": [
+    "Władysław",
+    "Maryla",
+    "Cezary"
+  ],
+  "06-28": [
+    "Ireneusz",
+    "Leon",
+    "Józef"
+  ],
+  "06-29": [
+    "Piotr",
+    "Paweł",
+    "Beata"
+  ],
+  "06-30": [
+    "Emilia",
+    "Lucyna",
+    "Władysław"
+  ],
+  "07-01": [
+    "Halina",
+    "Marian",
+    "Otton"
+  ],
+  "07-02": [
+    "Maria",
+    "Urban",
+    "Jagoda"
+  ],
+  "07-03": [
+    "Anatol",
+    "Tomasz",
+    "Jacek"
+  ],
+  "07-04": [
+    "Oskar",
+    "Elżbieta",
+    "Teodor"
+  ],
+  "07-05": [
+    "Karolina",
+    "Filomena",
+    "Antoni"
+  ],
+  "07-06": [
+    "Dominika",
+    "Gotard",
+    "Łucja"
+  ],
+  "07-07": [
+    "Estera",
+    "Kirył",
+    "Metody"
+  ],
+  "07-08": [
+    "Adrian",
+    "Priscilla",
+    "Kilian"
+  ],
+  "07-09": [
+    "Lukrecja",
+    "Weronika",
+    "Zenon"
+  ],
+  "07-10": [
+    "Olaf",
+    "Amelia",
+    "Filip"
+  ],
+  "07-11": [
+    "Olga",
+    "Kalina",
+    "Benedykt"
+  ],
+  "07-12": [
+    "Jan",
+    "Andrzej",
+    "Weronika"
+  ],
+  "07-13": [
+    "Małgorzata",
+    "Radomiła",
+    "Ernest"
+  ],
+  "07-14": [
+    "Bonawentura",
+    "Kamil",
+    "Marcelina"
+  ],
+  "07-15": [
+    "Henryk",
+    "Włodzimierz",
+    "Dawid"
+  ],
+  "07-16": [
+    "Maria",
+    "Karmen",
+    "Eustachy"
+  ],
+  "07-17": [
+    "Aneta",
+    "Bogdan",
+    "Jadwiga"
+  ],
+  "07-18": [
+    "Szymon",
+    "Kamil",
+    "Emil"
+  ],
+  "07-19": [
+    "Wincenty",
+    "Wodzisław",
+    "Wojciech"
+  ],
+  "07-20": [
+    "Czesław",
+    "Małgorzata",
+    "Hieronim"
+  ],
+  "07-21": [
+    "Daniel",
+    "Wawrzyniec",
+    "Andrzej"
+  ],
+  "07-22": [
+    "Magdalena",
+    "Bolesław",
+    "Maria"
+  ],
+  "07-23": [
+    "Bogna",
+    "Apolinary",
+    "Brygida"
+  ],
+  "07-24": [
+    "Kinga",
+    "Krystyna",
+    "Olga"
+  ],
+  "07-25": [
+    "Jakub",
+    "Krzysztof",
+    "Walentyna"
+  ],
+  "07-26": [
+    "Anna",
+    "Mirosława",
+    "Grażyna"
+  ],
+  "07-27": [
+    "Julia",
+    "Natalia",
+    "Rudolf"
+  ],
+  "07-28": [
+    "Wiktor",
+    "Innocenty",
+    "Ireneusz"
+  ],
+  "07-29": [
+    "Marta",
+    "Olaf",
+    "Beatrycze"
+  ],
+  "07-30": [
+    "Ludmiła",
+    "Robert",
+    "Julita"
+  ],
+  "07-31": [
+    "Ignacy",
+    "Helena",
+    "Emil"
+  ],
+  "08-01": [
+    "Piotr",
+    "Nadia",
+    "Justyn"
+  ],
+  "08-02": [
+    "Gustaw",
+    "Karina",
+    "Stefan"
+  ],
+  "08-03": [
+    "Lidia",
+    "Augustyn",
+    "Nikodem"
+  ],
+  "08-04": [
+    "Dominik",
+    "Prot",
+    "Jan"
+  ],
+  "08-05": [
+    "Maria",
+    "Oswald",
+    "Stanisław"
+  ],
+  "08-06": [
+    "Jakub",
+    "Sława",
+    "Oktawian"
+  ],
+  "08-07": [
+    "Kajetan",
+    "Donat",
+    "Albert"
+  ],
+  "08-08": [
+    "Cyprian",
+    "Emiliano",
+    "Dominik"
+  ],
+  "08-09": [
+    "Roman",
+    "Ryszard",
+    "Edyta"
+  ],
+  "08-10": [
+    "Wawrzyniec",
+    "Borys",
+    "Bianka"
+  ],
+  "08-11": [
+    "Klara",
+    "Zuzanna",
+    "Lidia"
+  ],
+  "08-12": [
+    "Lech",
+    "Euzebiusz",
+    "Hilaria"
+  ],
+  "08-13": [
+    "Diana",
+    "Hipolit",
+    "Gertruda"
+  ],
+  "08-14": [
+    "Maksymilian",
+    "Alfred",
+    "Euzebiusz"
+  ],
+  "08-15": [
+    "Maria",
+    "Napoleon",
+    "Alina"
+  ],
+  "08-16": [
+    "Roch",
+    "Joachim",
+    "Stefan"
+  ],
+  "08-17": [
+    "Jacek",
+    "Miron",
+    "Angelika"
+  ],
+  "08-18": [
+    "Helena",
+    "Ilona",
+    "Bronisław"
+  ],
+  "08-19": [
+    "Bolesław",
+    "Juliusz",
+    "Jan"
+  ],
+  "08-20": [
+    "Bernard",
+    "Sobiesław",
+    "Samuel"
+  ],
+  "08-21": [
+    "Joanna",
+    "Franciszek",
+    "Kazimiera"
+  ],
+  "08-22": [
+    "Cezary",
+    "Tymoteusz",
+    "Władysław"
+  ],
+  "08-23": [
+    "Filip",
+    "Apolinary",
+    "Róża"
+  ],
+  "08-24": [
+    "Bartłomiej",
+    "Malina",
+    "Jerzy"
+  ],
+  "08-25": [
+    "Luiza",
+    "Ludwik",
+    "Patrycja"
+  ],
+  "08-26": [
+    "Maria",
+    "Zofia",
+    "Ireneusz"
+  ],
+  "08-27": [
+    "Monika",
+    "Cezary",
+    "Józef"
+  ],
+  "08-28": [
+    "Augustyn",
+    "Patryk",
+    "Aleksander"
+  ],
+  "08-29": [
+    "Sabina",
+    "Jan",
+    "Beata"
+  ],
+  "08-30": [
+    "Róża",
+    "Szczęsny",
+    "Jan"
+  ],
+  "08-31": [
+    "Bohdan",
+    "Ramona",
+    "Rajmund"
+  ],
+  "09-01": [
+    "Bronisław",
+    "Idzi",
+    "Erazm"
+  ],
+  "09-02": [
+    "Julian",
+    "Stefan",
+    "Wilhelm"
+  ],
+  "09-03": [
+    "Grzegorz",
+    "Izabela",
+    "Szymon"
+  ],
+  "09-04": [
+    "Rozalia",
+    "Róża",
+    "Julian"
+  ],
+  "09-05": [
+    "Dorota",
+    "Wawrzyniec",
+    "Teodor"
+  ],
+  "09-06": [
+    "Beata",
+    "Zachar",
+    "Albin"
+  ],
+  "09-07": [
+    "Regina",
+    "Melchior",
+    "Ryszard"
+  ],
+  "09-08": [
+    "Maria",
+    "Radosław",
+    "Adriana"
+  ],
+  "09-09": [
+    "Piotr",
+    "Mikołaj",
+    "Ścibor"
+  ],
+  "09-10": [
+    "Łukasz",
+    "Mikołaj",
+    "Aldona"
+  ],
+  "09-11": [
+    "Jacek",
+    "Dagna",
+    "Protiusz"
+  ],
+  "09-12": [
+    "Maria",
+    "Amadeusz",
+    "Gwidon"
+  ],
+  "09-13": [
+    "Filip",
+    "Eugenia",
+    "Aureliusz"
+  ],
+  "09-14": [
+    "Cyprian",
+    "Roksana",
+    "Bernard"
+  ],
+  "09-15": [
+    "Albin",
+    "Nikodem",
+    "Maria"
+  ],
+  "09-16": [
+    "Kornel",
+    "Edyta",
+    "Łucja"
+  ],
+  "09-17": [
+    "Franciszek",
+    "Robert",
+    "Justyna"
+  ],
+  "09-18": [
+    "Irena",
+    "Józef",
+    "Stanisław"
+  ],
+  "09-19": [
+    "Janusz",
+    "Konstancja",
+    "Zuzanna"
+  ],
+  "09-20": [
+    "Filipina",
+    "Eustachy",
+    "Faustyna"
+  ],
+  "09-21": [
+    "Mateusz",
+    "Jonasz",
+    "Hipolit"
+  ],
+  "09-22": [
+    "Tomasz",
+    "Maurycy",
+    "Marek"
+  ],
+  "09-23": [
+    "Tekla",
+    "Bogusław",
+    "Ksenia"
+  ],
+  "09-24": [
+    "Gerard",
+    "Ryszard",
+    "Teodor"
+  ],
+  "09-25": [
+    "Władysław",
+    "Aurelia",
+    "Kamil"
+  ],
+  "09-26": [
+    "Justyna",
+    "Damian",
+    "Kosma"
+  ],
+  "09-27": [
+    "Wincenty",
+    "Damian",
+    "Galezy"
+  ],
+  "09-28": [
+    "Wacław",
+    "Marek",
+    "Luba"
+  ],
+  "09-29": [
+    "Michał",
+    "Rafał",
+    "Gabriel"
+  ],
+  "09-30": [
+    "Zofia",
+    "Hieronim",
+    "Wera"
+  ],
+  "10-01": [
+    "Danuta",
+    "Remigiusz",
+    "Teresa"
+  ],
+  "10-02": [
+    "Teofil",
+    "Dionizy",
+    "Sławomir"
+  ],
+  "10-03": [
+    "Teresa",
+    "Heliodor",
+    "Jan"
+  ],
+  "10-04": [
+    "Franciszek",
+    "Rozalia",
+    "Edwin"
+  ],
+  "10-05": [
+    "Apolinary",
+    "Placyd",
+    "Faustyna"
+  ],
+  "10-06": [
+    "Artur",
+    "Brunon",
+    "Fryderyka"
+  ],
+  "10-07": [
+    "Marek",
+    "Justyna",
+    "Sergiusz"
+  ],
+  "10-08": [
+    "Pelagia",
+    "Brygida",
+    "Ludwik"
+  ],
+  "10-09": [
+    "Arnold",
+    "Dionizy",
+    "Wincenty"
+  ],
+  "10-10": [
+    "Paulina",
+    "Daniel",
+    "Franciszek"
+  ],
+  "10-11": [
+    "Aldona",
+    "Emil",
+    "Filip"
+  ],
+  "10-12": [
+    "Eustachy",
+    "Maksymilian",
+    "Serafin"
+  ],
+  "10-13": [
+    "Gerald",
+    "Edward",
+    "Kornel"
+  ],
+  "10-14": [
+    "Alan",
+    "Kalikst",
+    "Bernard"
+  ],
+  "10-15": [
+    "Teresa",
+    "Jadwiga",
+    "Leonard"
+  ],
+  "10-16": [
+    "Jadwiga",
+    "Ambroży",
+    "Aurelia"
+  ],
+  "10-17": [
+    "Małgorzata",
+    "Ignacy",
+    "Wiktor"
+  ],
+  "10-18": [
+    "Łukasz",
+    "Julian",
+    "Justyn"
+  ],
+  "10-19": [
+    "Piotr",
+    "Kleofas",
+    "Jan"
+  ],
+  "10-20": [
+    "Irena",
+    "Kleopatra",
+    "Jan"
+  ],
+  "10-21": [
+    "Urszula",
+    "Hilarion",
+    "Jakub"
+  ],
+  "10-22": [
+    "Filip",
+    "Kordula",
+    "Jan"
+  ],
+  "10-23": [
+    "Seweryn",
+    "Irena",
+    "Jan"
+  ],
+  "10-24": [
+    "Rafał",
+    "Marcin",
+    "Antoni"
+  ],
+  "10-25": [
+    "Daria",
+    "Sambor",
+    "Kryspin"
+  ],
+  "10-26": [
+    "Lucjan",
+    "Ewaryst",
+    "Damian"
+  ],
+  "10-27": [
+    "Sabina",
+    "Iwona",
+    "Teodor"
+  ],
+  "10-28": [
+    "Szymon",
+    "Tadeusz",
+    "Juda"
+  ],
+  "10-29": [
+    "Euzebia",
+    "Narcyz",
+    "Wioletta"
+  ],
+  "10-30": [
+    "Zenobi",
+    "Przemysław",
+    "Edmund"
+  ],
+  "10-31": [
+    "Urban",
+    "Saturnin",
+    "Krzysztof"
+  ],
+  "11-01": [
+    "Wszystkich Świętych",
+    "Seweryn",
+    "Wiktoryna"
+  ],
+  "11-02": [
+    "Dzień Zaduszny",
+    "Tobiasz",
+    "Małgorzata"
+  ],
+  "11-03": [
+    "Hubert",
+    "Sylwia",
+    "Cezary"
+  ],
+  "11-04": [
+    "Karol",
+    "Olgierd",
+    "Helena"
+  ],
+  "11-05": [
+    "Elżbieta",
+    "Sławomir",
+    "Zachariasz"
+  ],
+  "11-06": [
+    "Feliks",
+    "Leonard",
+    "Zuzanna"
+  ],
+  "11-07": [
+    "Antoni",
+    "Klaudiusz",
+    "Engelbert"
+  ],
+  "11-08": [
+    "Seweryn",
+    "Bogdan",
+    "Dymitr"
+  ],
+  "11-09": [
+    "Urszula",
+    "Teodor",
+    "Ludwik"
+  ],
+  "11-10": [
+    "Andrzej",
+    "Ludomir",
+    "Leon"
+  ],
+  "11-11": [
+    "Marcin",
+    "Bartłomiej",
+    "Teodor"
+  ],
+  "11-12": [
+    "Renata",
+    "Witold",
+    "Mateusz"
+  ],
+  "11-13": [
+    "Bożydar",
+    "Stanisław",
+    "Mikołaj"
+  ],
+  "11-14": [
+    "Roger",
+    "Serafin",
+    "Wawrzyniec"
+  ],
+  "11-15": [
+    "Albert",
+    "Leopold",
+    "Karolina"
+  ],
+  "11-16": [
+    "Gertruda",
+    "Maria",
+    "Edmund"
+  ],
+  "11-17": [
+    "Grzegorz",
+    "Salomea",
+    "Hugo"
+  ],
+  "11-18": [
+    "Roman",
+    "Klaudyna",
+    "Karolina"
+  ],
+  "11-19": [
+    "Elżbieta",
+    "Seweryn",
+    "Janusz"
+  ],
+  "11-20": [
+    "Feliks",
+    "Anatol",
+    "Rafał"
+  ],
+  "11-21": [
+    "Janusz",
+    "Konrad",
+    "Maria"
+  ],
+  "11-22": [
+    "Cecylia",
+    "Marek",
+    "Walerian"
+  ],
+  "11-23": [
+    "Adela",
+    "Klemens",
+    "Felicyta"
+  ],
+  "11-24": [
+    "Jan",
+    "Floryn",
+    "Emilia"
+  ],
+  "11-25": [
+    "Katarzyna",
+    "Erazm",
+    "Alina"
+  ],
+  "11-26": [
+    "Sylwester",
+    "Konrad",
+    "Lechosław"
+  ],
+  "11-27": [
+    "Walerian",
+    "Wergiliusz",
+    "Maksym"
+  ],
+  "11-28": [
+    "Zdzisław",
+    "Grzegorz",
+    "Jakub"
+  ],
+  "11-29": [
+    "Błażej",
+    "Saturnin",
+    "Filipina"
+  ],
+  "11-30": [
+    "Andrzej",
+    "Maura",
+    "Justyna"
+  ],
+  "12-01": [
+    "Natalia",
+    "Eligiusz",
+    "Sobiesław"
+  ],
+  "12-02": [
+    "Paulina",
+    "Balbina",
+    "Rafał"
+  ],
+  "12-03": [
+    "Franciszek",
+    "Ksawery",
+    "Ksenia"
+  ],
+  "12-04": [
+    "Barbara",
+    "Krystian",
+    "Piotr"
+  ],
+  "12-05": [
+    "Saba",
+    "Krystyna",
+    "Mikołaj"
+  ],
+  "12-06": [
+    "Mikołaj",
+    "Jacek",
+    "Emilian"
+  ],
+  "12-07": [
+    "Ambroży",
+    "Teodor",
+    "Marcin"
+  ],
+  "12-08": [
+    "Maria",
+    "Klemens",
+    "Ryksa"
+  ],
+  "12-09": [
+    "Wiesława",
+    "Leokadia",
+    "Joachim"
+  ],
+  "12-10": [
+    "Julia",
+    "Daniel",
+    "Grzegorz"
+  ],
+  "12-11": [
+    "Damazy",
+    "Waldemar",
+    "Daniel"
+  ],
+  "12-12": [
+    "Aleksandra",
+    "Dagmara",
+    "Joanna"
+  ],
+  "12-13": [
+    "Łucja",
+    "Otylia",
+    "Władysława"
+  ],
+  "12-14": [
+    "Alfred",
+    "Izydor",
+    "Jan"
+  ],
+  "12-15": [
+    "Celina",
+    "Walerian",
+    "Ireneusz"
+  ],
+  "12-16": [
+    "Albin",
+    "Zdzisława",
+    "Alicja"
+  ],
+  "12-17": [
+    "Olimpia",
+    "Łazarz",
+    "Florian"
+  ],
+  "12-18": [
+    "Gracjan",
+    "Bogusław",
+    "Laury"
+  ],
+  "12-19": [
+    "Gabriela",
+    "Dariusz",
+    "Eleonora"
+  ],
+  "12-20": [
+    "Bogumiła",
+    "Dominik",
+    "Zenon"
+  ],
+  "12-21": [
+    "Tomasz",
+    "Piotr",
+    "Tomisław"
+  ],
+  "12-22": [
+    "Honorata",
+    "Zenon",
+    "Franciszek"
+  ],
+  "12-23": [
+    "Wiktoria",
+    "Sławomira",
+    "Jan"
+  ],
+  "12-24": [
+    "Adam",
+    "Ewa",
+    "Irmina"
+  ],
+  "12-25": [
+    "Boże Narodzenie",
+    "Anastazja",
+    "Eugenia"
+  ],
+  "12-26": [
+    "Szczepan",
+    "Dionizy",
+    "Zenon"
+  ],
+  "12-27": [
+    "Jan",
+    "Żaneta",
+    "Maksym"
+  ],
+  "12-28": [
+    "Cezary",
+    "Teofila",
+    "Antoni"
+  ],
+  "12-29": [
+    "Dawid",
+    "Tomasz",
+    "Dominik"
+  ],
+  "12-30": [
+    "Eugeniusz",
+    "Ireneusz",
+    "Katarzyna"
+  ],
+  "12-31": [
+    "Sylwester",
+    "Melania",
+    "Sebastian"
+  ]
+}
