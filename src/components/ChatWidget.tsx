@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, ActivityIndicator, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Send, Share2 } from 'lucide-react-native';
 import { ChatMessage } from '../services/calendarRepository';
@@ -7,7 +7,7 @@ import { ChatMessage } from '../services/calendarRepository';
 interface ChatWidgetProps {
   messages: ChatMessage[];
   hasSentToday: boolean;
-  onSendMessage: (nickname: string, message: string) => Promise<void>;
+  onSendMessage: (nickname: string, message: string) => Promise<boolean>;
 }
 
 export const ChatWidget: React.FC<ChatWidgetProps> = ({
@@ -44,10 +44,15 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
     setIsError(false);
     setIsSending(true);
     try {
-      await onSendMessage(nicknameText.trim(), messageText.trim());
-      setMessageText('');
+      const success = await onSendMessage(nicknameText.trim(), messageText.trim());
+      if (success) {
+        setMessageText('');
+      } else {
+        Alert.alert('Błąd', 'Nie udało się opublikować wpisu. Spróbuj ponownie później.');
+      }
     } catch (err) {
       console.error(err);
+      Alert.alert('Błąd', 'Wystąpił nieoczekiwany problem przy wysyłaniu wpisu.');
     } finally {
       setIsSending(false);
     }

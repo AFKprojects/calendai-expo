@@ -138,13 +138,15 @@ export const CalendarScreen: React.FC = () => {
     await markAsTornOff(todayDateStr, todayDay);
   };
 
-  const handleSendMessage = async (nickname: string, text: string) => {
-    if (!todayDateStr) return;
+  const handleSendMessage = async (nickname: string, text: string): Promise<boolean> => {
+    if (!todayDateStr) return false;
     const success = await sendChatMessage(todayDateStr, nickname, text);
     if (success) {
       await AsyncStorage.setItem(`has_sent_chat_${todayDateStr}`, 'true');
       setHasSentChatToday(true);
+      return true;
     }
+    return false;
   };
 
   const handleOnboardingSubmit = async () => {
@@ -345,7 +347,7 @@ interface TodayCalendarPageProps {
   day: CalendarDay;
   chatMessages: ChatMessage[];
   hasSentToday: boolean;
-  onSendMessage: (nickname: string, message: string) => Promise<void>;
+  onSendMessage: (nickname: string, message: string) => Promise<boolean>;
   currentHour: number;
 }
 
