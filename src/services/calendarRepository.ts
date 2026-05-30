@@ -450,6 +450,32 @@ export const markAsTornOff = async (dateStr: string, day: CalendarDay) => {
   }
 };
 
+export const deleteDayFromArchive = async (dateStr: string) => {
+  try {
+    await initFileSystem();
+    const archivedFile = `${archiveDir}${dateStr}.json`;
+    const cacheFile = `${cacheDir}today_${dateStr}.json`;
+
+    const archivedInfo = await FileSystem.getInfoAsync(archivedFile);
+    if (archivedInfo.exists) {
+      await FileSystem.deleteAsync(archivedFile);
+    }
+
+    const cacheInfo = await FileSystem.getInfoAsync(cacheFile);
+    if (cacheInfo.exists) {
+      await FileSystem.deleteAsync(cacheFile);
+    }
+
+    const lastTornDate = await AsyncStorage.getItem('last_torn_date');
+    if (lastTornDate === dateStr) {
+      await AsyncStorage.removeItem('last_torn_date');
+    }
+  } catch (error) {
+    console.warn('Error deleting day from archive:', error);
+  }
+};
+
+
 export const getArchive = async (): Promise<CalendarDay[]> => {
   try {
     await initFileSystem();

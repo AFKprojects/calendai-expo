@@ -14,7 +14,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { ArrowLeft, User, Star, Bell, Info, RefreshCw, Clock } from 'lucide-react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { syncUserProfile } from '../services/calendarRepository';
+import { syncUserProfile, deleteDayFromArchive } from '../services/calendarRepository';
 
 const ALL_TOPICS = [
   "Nowe Technologie",
@@ -103,12 +103,19 @@ export const SettingsScreen: React.FC = () => {
 
   const resetTearOffState = async () => {
     try {
-      await AsyncStorage.removeItem('last_torn_date');
-      Alert.alert('Sukces', 'Zresetowano stan zrywania kartki. Powróć na główny ekran aby go przetestować!');
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const todayStr = `${yyyy}-${mm}-${dd}`;
+
+      await deleteDayFromArchive(todayStr);
+      Alert.alert('Sukces', 'Zresetowano stan zrywania kartki. Powróć na główny ekran aby pobrać nowe dane z Supabase!');
     } catch (err) {
       console.error(err);
     }
   };
+
 
   return (
     <SafeAreaView style={styles.container}>
