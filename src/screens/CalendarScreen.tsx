@@ -7,12 +7,16 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   StatusBar,
+  TextInput,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { Settings, ListCollapse, RefreshCw } from 'lucide-react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as Haptics from 'expo-haptics';
 
 import { PageTearBox } from '../components/PageTearBox';
 import { NamedayHeader } from '../components/NamedayHeader';
@@ -26,6 +30,7 @@ import {
   markAsTornOff,
   subscribeToChatMessages,
   sendChatMessage,
+  syncUserProfile,
 } from '../services/calendarRepository';
 
 type RootStackParamList = {
@@ -56,6 +61,11 @@ export const CalendarScreen: React.FC = () => {
   const [todayDateStr, setTodayDateStr] = useState('');
   const [currentHour, setCurrentHour] = useState(new Date().getHours());
 
+  // Onboarding states
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [onboardingNickname, setOnboardingNickname] = useState('');
+  const [isOnboardingSubmitting, setIsOnboardingSubmitting] = useState(false);
+
   // Load screen data
   useEffect(() => {
     if (!isFocused) return;
@@ -77,6 +87,14 @@ export const CalendarScreen: React.FC = () => {
         // Load chat status
         const sent = await AsyncStorage.getItem(`has_sent_chat_${todayStr}`);
         setHasSentChatToday(sent === 'true');
+
+        // Check nickname for onboarding
+        const savedNickname = await AsyncStorage.getItem('chat_nickname');
+        if (!savedNickname || savedNickname === 'Anonim' || savedNickname.trim() === '') {
+          setShowOnboarding(true);
+        } else {
+          setShowOnboarding(false);
+        }
 
         // Load calendar days
         const todayData = await getCalendarDay(todayStr);
@@ -129,11 +147,140 @@ export const CalendarScreen: React.FC = () => {
     }
   };
 
+  const handleOnboardingSubmit = async () => {
+    const trimmed = onboardingNickname.trim();
+    if (!trimmed || trimmed.length > 15) {
+      return;
+    }
+
+    setIsOnboardingSubmitting(true);
+    try {
+      // Trigger haptic feedback
+      const hapticsEnabled = await AsyncStorage.getItem('haptics_enabled');
+      if (hapticsEnabled !== 'false') {
+        await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      }
+
+      // Save nickname to AsyncStorage
+      await AsyncStorage.setItem('chat_nickname', trimmed);
+
+      // Fetch user profile and interests to sync with Supabase
+      const savedTopicsStr = await AsyncStorage.getItem('selected_topics');
+      const defaultTopics = ["Nowe Technologie", "Historia Świata", "Psychologia"];
+      const topics = savedTopicsStr ? JSON.parse(savedTopicsStr) : defaultTopics;
+
+      // Sync profile to Supabase
+      await syncUserProfile(trimmed, topics);
+
+      // Hide onboarding screen
+      setShowOnboarding(false);
+
+      // Refresh/Reload calendar data just to make sure we're fully synced
+      setIsLoading(true);
+      const today = new Date();
+      const todayStr = formatDateString(today);
+      setTodayDateStr(todayStr);
+
+      const yesterday = new Date();
+      yesterday.setDate(yesterday.getDate() - 1);
+      const yesterdayStr = formatDateString(yesterday);
+
+      const torn = await isTornOff(todayStr);
+      setIsTorn(torn);
+
+      const sent = await AsyncStorage.getItem(`has_sent_chat_${todayStr}`);
+      setHasSentChatToday(sent === 'true');
+
+      const todayData = await getCalendarDay(todayStr);
+      const yesterdayData = await getCalendarDay(yesterdayStr);
+
+      setTodayDay(todayData);
+      setYesterdayDay(yesterdayData);
+
+      const debugHourStr = await AsyncStorage.getItem('debug_simulated_hour');
+      if (debugHourStr) {
+        setCurrentHour(parseInt(debugHourStr, 10));
+      } else {
+        setCurrentHour(new Date().getHours());
+      }
+    } catch (err) {
+      console.error('Failed to save onboarding nickname:', err);
+    } finally {
+      setIsOnboardingSubmitting(false);
+      setIsLoading(false);
+    }
+  };
+
   if (isLoading) {
     return (
       <View style={styles.loadingContainer}>
         <ActivityIndicator size="large" color="#8B0000" />
       </View>
+    );
+  }
+
+  if (showOnboarding) {
+    return (
+      <SafeAreaView style={styles.onboardingContainer}>
+        <StatusBar barStyle="dark-content" backgroundColor="#FAF9F6" />
+        <KeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+          style={styles.onboardingKeyboardAvoid}
+        >
+          <ScrollView
+            contentContainerStyle={styles.onboardingScroll}
+            keyboardShouldPersistTaps="handled"
+          >
+            <View style={styles.onboardingCard}>
+              <Text style={styles.onboardingLogo}>CALENDAI</Text>
+              <Text style={styles.onboardingSubtitle}>Twój codzienny kalendarz zrywany</Text>
+              
+              <View style={styles.onboardingDivider} />
+              
+              <Text style={styles.onboardingLabel}>Witaj w społeczności!</Text>
+              <Text style={styles.onboardingDescription}>
+                Zanim przejdziesz do kalendarza, wybierz swój podpis. Będzie on na stałe przypisany do Twoich dzisiejszych i przyszłych wpisów na kartach kalendarza.
+              </Text>
+              <Text style={styles.onboardingWarning}>
+                Uwaga: Wybranego podpisu nie będzie można później zmienić!
+              </Text>
+              
+              <TextInput
+                style={[
+                  styles.onboardingInput,
+                  onboardingNickname.trim().length > 0 && styles.onboardingInputActive
+                ]}
+                value={onboardingNickname}
+                onChangeText={(text) => {
+                  if (text.length <= 15) {
+                    setOnboardingNickname(text);
+                  }
+                }}
+                placeholder="Wpisz swój podpis (np. Janek)..."
+                placeholderTextColor="#999"
+                maxLength={15}
+                autoFocus
+                autoCorrect={false}
+              />
+              
+              <TouchableOpacity
+                style={[
+                  styles.onboardingButton,
+                  (!onboardingNickname.trim() || isOnboardingSubmitting) && styles.onboardingButtonDisabled
+                ]}
+                onPress={handleOnboardingSubmit}
+                disabled={!onboardingNickname.trim() || isOnboardingSubmitting}
+              >
+                {isOnboardingSubmitting ? (
+                  <ActivityIndicator color="#FFF" size="small" />
+                ) : (
+                  <Text style={styles.onboardingButtonText}>Rozpocznij przygodę</Text>
+                )}
+              </TouchableOpacity>
+            </View>
+          </ScrollView>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
     );
   }
 
@@ -160,29 +307,35 @@ export const CalendarScreen: React.FC = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Main Content Area */}
-      <View style={styles.contentArea}>
-        {todayDay && yesterdayDay ? (
-          <PageTearBox
-            isTorn={isTorn}
-            onTearOff={handleTearOff}
-            bottomPage={
-              <TodayCalendarPage
-                day={todayDay}
-                chatMessages={chatMessages}
-                hasSentToday={hasSentChatToday}
-                onSendMessage={handleSendMessage}
-                currentHour={currentHour}
-              />
-            }
-            topPage={<YesterdayCalendarPage day={yesterdayDay} />}
-          />
-        ) : (
-          <View style={styles.errorContainer}>
-            <Text style={styles.errorText}>Błąd ładowania danych kalendarza.</Text>
-          </View>
-        )}
-      </View>
+      {/* Keyboard Avoiding Container for regular view */}
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        style={{ flex: 1 }}
+      >
+        {/* Main Content Area */}
+        <View style={styles.contentArea}>
+          {todayDay && yesterdayDay ? (
+            <PageTearBox
+              isTorn={isTorn}
+              onTearOff={handleTearOff}
+              bottomPage={
+                <TodayCalendarPage
+                  day={todayDay}
+                  chatMessages={chatMessages}
+                  hasSentToday={hasSentChatToday}
+                  onSendMessage={handleSendMessage}
+                  currentHour={currentHour}
+                />
+              }
+              topPage={<YesterdayCalendarPage day={yesterdayDay} />}
+            />
+          ) : (
+            <View style={styles.errorContainer}>
+              <Text style={styles.errorText}>Błąd ładowania danych kalendarza.</Text>
+            </View>
+          )}
+        </View>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
@@ -401,5 +554,117 @@ const styles = StyleSheet.create({
     color: '#555',
     textAlign: 'center',
     lineHeight: 20,
+  },
+  onboardingContainer: {
+    flex: 1,
+    backgroundColor: '#FAF9F6',
+  },
+  onboardingKeyboardAvoid: {
+    flex: 1,
+  },
+  onboardingScroll: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    padding: 24,
+  },
+  onboardingCard: {
+    backgroundColor: '#FCF9F2',
+    borderRadius: 16,
+    padding: 24,
+    borderWidth: 1,
+    borderColor: 'rgba(139, 0, 0, 0.15)',
+    shadowColor: '#8B0000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.08,
+    shadowRadius: 10,
+    elevation: 4,
+    alignItems: 'center',
+  },
+  onboardingLogo: {
+    fontSize: 28,
+    fontWeight: '900',
+    letterSpacing: 4,
+    color: '#8B0000',
+    marginBottom: 4,
+  },
+  onboardingSubtitle: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#666',
+    letterSpacing: 1,
+    textTransform: 'uppercase',
+  },
+  onboardingDivider: {
+    width: '40%',
+    height: 2,
+    backgroundColor: '#8B0000',
+    marginVertical: 20,
+    opacity: 0.3,
+  },
+  onboardingLabel: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  onboardingDescription: {
+    fontSize: 14,
+    color: '#555',
+    lineHeight: 22,
+    textAlign: 'center',
+    marginBottom: 12,
+  },
+  onboardingWarning: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: '#8B0000',
+    textAlign: 'center',
+    marginBottom: 20,
+    backgroundColor: 'rgba(139, 0, 0, 0.05)',
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 6,
+  },
+  onboardingInput: {
+    width: '100%',
+    height: 48,
+    borderWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.12)',
+    borderRadius: 8,
+    paddingHorizontal: 16,
+    fontSize: 15,
+    color: '#333333',
+    backgroundColor: '#FAF9F6',
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  onboardingInputActive: {
+    borderColor: '#8B0000',
+    borderWidth: 1.5,
+  },
+  onboardingButton: {
+    width: '100%',
+    backgroundColor: '#8B0000',
+    borderRadius: 8,
+    height: 48,
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  onboardingButtonDisabled: {
+    backgroundColor: '#CCCCCC',
+    shadowOpacity: 0,
+    elevation: 0,
+  },
+  onboardingButtonText: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    fontSize: 15,
+    letterSpacing: 0.5,
   },
 });

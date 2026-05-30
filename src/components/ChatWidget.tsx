@@ -72,14 +72,17 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
           </View>
         ) : (
           <View style={styles.streamContainer}>
-            {messages.slice(0, 6).map((msg) => (
-              <View key={msg.id || msg.timestamp} style={styles.msgRow}>
-                <Text style={styles.msgUser} numberOfLines={1}>
-                  {msg.userName}:
-                </Text>
-                <Text style={styles.msgText}>{msg.message}</Text>
-              </View>
-            ))}
+            {[...messages]
+              .reverse()
+              .slice(0, 10)
+              .map((msg) => (
+                <View key={msg.id || msg.timestamp} style={styles.msgRow}>
+                  <Text style={styles.msgUser} numberOfLines={1}>
+                    {msg.userName}:
+                  </Text>
+                  <Text style={styles.msgText}>{msg.message}</Text>
+                </View>
+              ))}
           </View>
         )}
 
@@ -88,12 +91,10 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
           <View style={styles.formContainer}>
             <View style={styles.inputsRow}>
               <TextInput
-                style={[styles.input, styles.nicknameInput]}
+                style={[styles.input, styles.nicknameInput, styles.disabledInput]}
                 value={nicknameText}
-                onChangeText={(text) => {
-                  if (text.length <= 15) setNicknameText(text);
-                }}
-                placeholder="Twój podpis"
+                editable={false}
+                placeholder="Podpis"
                 placeholderTextColor="#999"
                 maxLength={15}
               />
@@ -231,6 +232,10 @@ const styles = StyleSheet.create({
   nicknameInput: {
     flex: 0.35,
     marginRight: 8,
+  },
+  disabledInput: {
+    backgroundColor: '#EAE9E6',
+    color: '#777777',
   },
   messageInput: {
     flex: 0.65,

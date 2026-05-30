@@ -140,15 +140,11 @@ export const SettingsScreen: React.FC = () => {
         <View style={styles.card}>
           <Text style={styles.cardLabel}>Podpis na tablicy</Text>
           <Text style={styles.cardDescription}>
-            Twoja nazwa wyświetlana na dzisiejszej kartce kalendarza przy opublikowanym wpisie.
+            Twoja nazwa wyświetlana na dzisiejszej kartce kalendarza przy opublikowanym wpisie. Podpis jest przypisany na stałe i nie można go edytować.
           </Text>
-          <TextInput
-            style={styles.textInput}
-            value={nickname}
-            onChangeText={saveNickname}
-            placeholder="Twój podpis..."
-            maxLength={15}
-          />
+          <View style={[styles.textInput, styles.readOnlyInput]}>
+            <Text style={styles.readOnlyInputText}>{nickname}</Text>
+          </View>
         </View>
 
         {/* AI Topics */}
@@ -328,6 +324,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#333333',
     backgroundColor: '#FAF9F6',
+  },
+  readOnlyInput: {
+    backgroundColor: '#EAE9E6',
+    justifyContent: 'center',
+  },
+  readOnlyInputText: {
+    fontSize: 14,
+    color: '#666666',
   },
   chipContainer: {
     flexDirection: 'row',
