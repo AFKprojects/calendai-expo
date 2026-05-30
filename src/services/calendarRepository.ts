@@ -424,7 +424,31 @@ export const getCalendarDay = async (dateStr: string): Promise<CalendarDay> => {
     const archivedInfo = await FileSystem.getInfoAsync(archivedFile);
     if (archivedInfo.exists) {
       const content = await FileSystem.readAsStringAsync(archivedFile);
-      return JSON.parse(content);
+      const dayData = JSON.parse(content) as CalendarDay;
+
+      // If it is today's date, we must merge the latest hourly widgets from Supabase/cache
+      // because new hourly widgets continue to unlock throughout the day!
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const todayStr = `${yyyy}-${mm}-${dd}`;
+
+      if (dateStr === todayStr) {
+        const latestWidgets = await fetchHourlyWidgets(dateStr);
+        const updatedDay = {
+          ...dayData,
+          hourlyWidgets: {
+            ...dayData.hourlyWidgets,
+            ...latestWidgets
+          }
+        };
+        // Save the updated version back to the archive
+        await FileSystem.writeAsStringAsync(archivedFile, JSON.stringify(updatedDay));
+        return updatedDay;
+      }
+
+      return dayData;
     }
   } catch (e) {
     console.error('Archive read failed:', e);
